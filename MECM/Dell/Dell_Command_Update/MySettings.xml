@@ -1,0 +1,56 @@
+﻿<!--
+Title: How to Update Dell Drivers and BIOS During SCCM OSD
+Description: used to import settings in dell command update
+More info: https://alteredadmin.github.io/posts/how-to-update-dell-drivers-and-bios-during-sccm-osd/
+=====================================================
+Name: Altered Admin
+Website: https://alteredadmin.github.io/
+If you found this helpful Please consider:
+Buymeacoffee: http://buymeacoffee.com/alteredadmin
+BTC: bc1qhkw7kv9dtdk8xwvetreya2evjqtxn06cghyxt7
+LTC: ltc1q2mrh9s8sgmh8h5jtra3gqxuhvy04vuagpm3dk9
+ETH: 0xef053b0d936746Df00C9CCe0454b7b8afb1497ac
+-->
+
+<Configuration>
+  <Group Name="Settings">
+    <Property Name="AppCode">
+      <Value>Classic</Value>
+    </Property>
+    <Property Name="InstallPath">
+      <Value>C:\Program Files (x86)\Dell\CommandUpdate\</Value>
+    </Property>
+    <Property Name="AppExeName">
+      <Value>DellCommandUpdate.exe</Value>
+    </Property>
+    <Group Name="General">
+      <Property Name="UserConsent">
+        <Value>false</Value>
+      </Property>
+      <Property Name="SuspendBitLocker">
+        <Value>true</Value>
+      </Property>
+      <Group Name="CustomProxySettings">
+        <Group Name="ProxyAuthentication" />
+      </Group>
+    </Group>
+    <Group Name="Schedule">
+      <Property Name="ScheduleMode">
+        <Value>ManualUpdates</Value>
+      </Property>
+      <Property Name="AutomationMode">
+        <Value>ScanDownloadNotify</Value>
+      </Property>
+    </Group>
+    <Group Name="UpdateFilter">
+      <Group Name="RecommendedLevel" />
+      <Group Name="UpdateType" />
+      <Group Name="DeviceCategory" />
+    </Group>
+    <Group Name="AdvancedDriverRestore">
+      <Property Name="IsAdvancedDriverRestoreEnabled">
+        <Value>true</Value>
+      </Property>
+    </Group>
+  </Group>
+</Configuration>
