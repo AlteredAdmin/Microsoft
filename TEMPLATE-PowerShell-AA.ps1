@@ -36,7 +36,7 @@ ETH: 0xef053b0d936746Df00C9CCe0454b7b8afb1497ac
     
 
 .NOTES
-    Author:         Altered Admin
+    Author:         Altered Admin & ChatGPT
     Email:          
     Date:           Jan 13 2023
 #>
